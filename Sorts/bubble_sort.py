@@ -4,7 +4,7 @@
 # Why would you ever need this sort?
 # It's best used with the list is already sorted ;)
 
-def bubble_sort(self, array):
+def bubble_sort(array):
     for i in range(len(array) - 1):
         for j in range(len(array) - 1):
             if array[j] > array[j + 1]:
