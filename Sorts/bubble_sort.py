@@ -2,7 +2,7 @@
 
 
 def bubble_sort(array):
-    '''
+    """
 
     Input: an input array to be sorted
     Output: A sorted array
@@ -13,7 +13,7 @@ def bubble_sort(array):
 
     :param array:
     :return:
-    '''
+    """
     for i in range(len(array) - 1):
         for j in range(len(array) - 1):
             if array[j] > array[j + 1]:

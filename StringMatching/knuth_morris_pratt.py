@@ -7,7 +7,7 @@
 
 
 def prefix_kmp(pattern):
-    '''
+    """
 
     Creates a prefix table for the Knuth-Morris-Pratt algorithm.
     This table is used to prevent the index from backtracking during the parsing phase.
@@ -19,8 +19,7 @@ def prefix_kmp(pattern):
 
     :param pattern:
     :return:
-    '''
-
+    """
 
     m = len(pattern)
     prefix_table = [-1] * m
@@ -37,7 +36,7 @@ def prefix_kmp(pattern):
 
 
 def kmp(text, pattern):
-    '''
+    """
     Input:
     Takes a passage of text and a search pattern as inputs.
 
@@ -52,7 +51,7 @@ def kmp(text, pattern):
     :param pattern:
     :return:
 
-    '''
+    """
     m = 0
     i = 0
     prefix_table = prefix_kmp(pattern)
