@@ -3,6 +3,7 @@
 # HeapSort Implementation based off the pseudocode
 # at https://rosettacode.org/wiki/Sorting_algorithms/Heapsort
 
+
 def heap_sort(array):
     heapify(array, len(array))
 
@@ -32,5 +33,5 @@ def sift_down(array, start, end):
 def heapify(array, length):
     start = (length - 2) // 2
     while start >= 0:
-        sift_down(array, start, length -1)
+        sift_down(array, start, length - 1)
         start -= 1
