@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-
 def euler_totient(n):
     """
 

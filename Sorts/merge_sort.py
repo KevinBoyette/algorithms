@@ -37,4 +37,3 @@ def merge(left, right):
     if len(right) > 0:
         result.extend(right)
     return result
-
