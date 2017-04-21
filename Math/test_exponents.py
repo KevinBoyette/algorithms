@@ -60,24 +60,6 @@ def test_isOne():
 
 class TestRecurExpBySquaring:
 
-    def setup(self):
-        print ("setup             class:TestStuff")
-
-    def teardown(self):
-        print ("teardown          class:TestStuff")
-
-    def setup_class(cls):
-        print ("setup_class       class:%s" % cls.__name__)
-
-    def teardown_class(cls):
-        print ("teardown_class    class:%s" % cls.__name__)
-
-    def setup_method(self, method):
-        print ("setup_method      method:%s" % method.__name__)
-
-    def teardown_method(self, method):
-        print ("teardown_method   method:%s" % method.__name__)
-
     def test_recur_exp_by_squaring_2_3(self):
         print("Testing Exponention by squaring - 2 ** 3")
         assert recur_exp_by_squaring(2, 3) == 8
@@ -108,24 +90,6 @@ class TestRecurExpBySquaring:
 
 
 class TestIterativeExpBySquaringMethod:
-
-    def setup(self):
-        print ("setup             class:TestStuff")
-
-    def teardown(self):
-        print ("teardown          class:TestStuff")
-
-    def setup_class(cls):
-        print ("setup_class       class:%s" % cls.__name__)
-
-    def teardown_class(cls):
-        print ("teardown_class    class:%s" % cls.__name__)
-
-    def setup_method(self, method):
-        print ("setup_method      method:%s" % method.__name__)
-
-    def teardown_method(self, method):
-        print ("teardown_method   method:%s" % method.__name__)
 
     def test_iterative_squaring_exponent_method_2_3(self):
         print("Testing Exponention by squaring - 2 ** 3")
