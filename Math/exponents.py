@@ -1,19 +1,24 @@
 #!/usr/bin/python3
 
 
-def isEven(n): return True if n % 2 == 0 else False
+def isEven(n):
+    return True if n % 2 == 0 else False
 
 
-def isOdd(n): return True if n % 2 == 1 else False
+def isOdd(n):
+    return True if n % 2 == 1 else False
 
 
-def isNegative(n): return True if n < 0 else False
+def isNegative(n):
+    return True if n < 0 else False
 
 
-def isZero(n): return True if n == 0 else False
+def isZero(n):
+    return True if n == 0 else False
 
 
-def isOne(n): return True if n == 1 else False
+def isOne(n):
+    return True if n == 1 else False
 
 
 def recur_exp_by_squaring(x, n):

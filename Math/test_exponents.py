@@ -8,19 +8,19 @@ from exponents import isOne
 
 
 def setup_module(module):
-    print ("setup_module      module:%s" % module.__name__)
+    print("setup_module      module:%s" % module.__name__)
 
 
 def teardown_module(module):
-    print ("teardown_module   module:%s" % module.__name__)
+    print("teardown_module   module:%s" % module.__name__)
 
 
 def setup_function(function):
-    print ("setup_function    function:%s" % function.__name__)
+    print("setup_function    function:%s" % function.__name__)
 
 
 def teardown_function(function):
-    print ("teardown_function function:%s" % function.__name__)
+    print("teardown_function function:%s" % function.__name__)
 
 
 def test_isEven():
@@ -59,7 +59,6 @@ def test_isOne():
 
 
 class TestRecurExpBySquaring:
-
     def test_recur_exp_by_squaring_2_3(self):
         print("Testing Exponention by squaring - 2 ** 3")
         assert recur_exp_by_squaring(2, 3) == 8
@@ -90,7 +89,6 @@ class TestRecurExpBySquaring:
 
 
 class TestIterativeExpBySquaringMethod:
-
     def test_iterative_squaring_exponent_method_2_3(self):
         print("Testing Exponention by squaring - 2 ** 3")
         assert iterative_squaring_exponent_method(2, 3) == 8

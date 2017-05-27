@@ -4,7 +4,8 @@
 
 
 def merge_sort(array):
-    if len(array) <= 1:
+    array_len = len(array)
+    if array_len <= 1:
         return array
     else:
         left = []
@@ -25,15 +26,17 @@ def merge_sort(array):
 
 def merge(left, right):
     result = []
-    while len(left) > 0 and len(right) > 0:
+    left_len = len(left)
+    right_len = len(right)
+    while left_len > 0 and right_len > 0:
         if left[0] <= right[0]:
             result.append(left[0])
             left = left[1:]
         else:
             result.append(right[0])
             right = right[1:]
-    if len(left) > 0:
+    if left_len > 0:
         result.extend(left)
-    if len(right) > 0:
+    if right_len > 0:
         result.extend(right)
     return result

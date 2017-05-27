@@ -6,7 +6,6 @@ from merge_sort import merge_sort, merge
 
 
 class TestBubbleSort:
-
     def test_bubble_sort_empty(self):
         assert bubble_sort([]) == []
 
@@ -20,7 +19,6 @@ class TestBubbleSort:
 
 
 class TestInsertionSort:
-
     def test_insertion_sort_empty(self):
         assert insertion_sort([]) == []
 
@@ -34,7 +32,6 @@ class TestInsertionSort:
 
 
 class TestSelectionSort:
-
     def test_selection_sort_empty(self):
         assert selection_sort([]) == []
 
@@ -48,7 +45,6 @@ class TestSelectionSort:
 
 
 class TestHeapSort:
-
     def test_heap_sort_empty(self):
         assert heap_sort([]) == []
 
@@ -62,7 +58,6 @@ class TestHeapSort:
 
 
 class TestMergeSort:
-
     def test_merge_sort_empty(self):
         assert merge_sort([]) == []
 
