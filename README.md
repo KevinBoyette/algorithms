@@ -4,6 +4,6 @@
 
 
 #### Running Tests
-Tests are written using PyTest.  PyTest-Watch and PyTest-PyTestMon are awesome tools if you're looking for a test runner.  
+Tests are written using Unittest.  To run all tests use the following command: g
 
-* `ptw -- --testmon Algorithms/`
+* `./run_tests.sh`
