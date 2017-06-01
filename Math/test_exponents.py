@@ -95,6 +95,7 @@ class TestIterativeExponents(unittest.TestCase):
         print("Testing Exponention by squaring - 0.1 ** -2")
         self.assertEqual(iterative_squaring_exponent_method(0.1, -2), 100)
 
+
 def suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestHelpers))
@@ -102,5 +103,6 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestIterativeExponents))
     return test_suite
 
-runner=unittest.TextTestRunner()
+
+runner = unittest.TextTestRunner()
 runner.run(suite())
