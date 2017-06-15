@@ -74,13 +74,13 @@ class TestMergeSort(unittest.TestCase):
 
     def test_heap_sort_with_many_items(self):
         self.assertNotEqual(merge_sort([2, 1, 2, 4, 3, 2]), [])
-        self.assertNotEqual(merge_sort([2, 1, 2, 4, 3, 2]), [1, 2, 2, 2, 3, 4])
+        self.assertEqual(merge_sort([2, 1, 2, 4, 3, 2]), [1, 2, 2, 2, 3, 4])
 
     def test_merge(self):
         self.assertEqual(merge([1, 2], [2, 3]), [1, 2, 2, 3])
         self.assertEqual(merge([], [2, 4, 2]), [2, 4, 2])
         self.assertEqual(merge([], []), [])
-        self.assertNotEqual(merge([5, 4, 3], [1, 7]), [1, 5, 4, 3, 7])
+        self.assertEqual(merge([5, 4, 3], [1, 7]), [1, 5, 4, 3, 7])
 
 
 def suite():
