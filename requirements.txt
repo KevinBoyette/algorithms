@@ -1,1 +1,5 @@
 pytest
+pytest-testmon
+pytest-watch
+mypy
+prospector
