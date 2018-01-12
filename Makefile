@@ -10,7 +10,9 @@ deps:
 
 lint:
 	@mypy --strict **/*.py
-	@prospector -s veryhigh 
+
+prospector:
+	@prospector -s veryhigh
 
 clean:
 	@rm -r */__pycache__

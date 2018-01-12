@@ -6,11 +6,12 @@
 # https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm
 
 
-def prefix_kmp(pattern):
+def _prefix_kmp(pattern):
     """
 
     Creates a prefix table for the Knuth-Morris-Pratt algorithm.
-    This table is used to prevent the index from backtracking during the parsing phase.
+    This table is used to prevent the index from backtracking during the
+    parsing phase.
     The table making phase completes with runtime O(k) worst case.
 
     Input: The pattern in which to search for.
@@ -41,10 +42,13 @@ def kmp(text, pattern):
     Takes a passage of text and a search pattern as inputs.
 
     Output:
-    Returns a zero based index at the location in which the pattern is found in the text.
+    Returns a zero based index at the location in which the
+    pattern is found in the text.
 
-    Compared to the naive approach, O(m * n), using a prefix table allows one to search faster,
-    achieving O(n + k), where k is from building the prefix table and n being the size of the search text.
+    Compared to the naive approach, O(m * n),
+    using a prefix table allows one to search faster, achieving O(n + k),
+    where k is from building the prefix table and n being the size of the
+    search text.
 
 
     :param text:
@@ -54,7 +58,7 @@ def kmp(text, pattern):
     """
     m = 0
     i = 0
-    prefix_table = prefix_kmp(pattern)
+    prefix_table = _prefix_kmp(pattern)
 
     while m + i < len(text):
         if pattern[i] == text[m + i]:
