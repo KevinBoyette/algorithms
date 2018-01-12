@@ -57,7 +57,7 @@ def iterative_squaring_exponent_method(x, n):
                  (x**2) **(n/2) if n is even
 
     """
-    print("x: {} n:{}".format(x, n))
+
     if isZero(n):
         return 1
     elif isNegative(n):
