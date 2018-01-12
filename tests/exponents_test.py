@@ -20,7 +20,7 @@ def test_iterative_squaring_exponents(name, inputs, expected):
 
 
 @pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_iterative_squaring_exponents(name, inputs, expected):
+def test_recursive_squaring_exponents(name, inputs, expected):
     assert expected == mathematics.recur_exp_by_squaring(
         inputs[0],
         inputs[1]

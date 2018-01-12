@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+.mypy_cache
+.tmontmp
 .testmondata
 __pycache__/
 *.py[cod]
