@@ -9,11 +9,11 @@ def merge_sort(array):
         middle = len(array) // 2
         left = merge_sort(array[:middle])
         right = merge_sort(array[middle:])
-        return merge(left, right)
+        return _merge(left, right)
     return array
 
 
-def merge(left, right):
+def _merge(left, right):
     result = []
     while len(left) > 0 and len(right) > 0:
         if left[0] < right[0]:
