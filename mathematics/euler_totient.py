@@ -3,11 +3,16 @@
 
 def euler_totient(n):
     """
-
     Euler's Totient Function counts the positive integers up to
     a given integer n that are 'relatively' prime to n.
 
     Usually denoted with the greek symbol for phi.
+
+    Args:
+        n (int): An integer
+
+    Returns:
+        int: The number of integers relatively prime to n
 
     Example:
         euler_totient(10) == 4

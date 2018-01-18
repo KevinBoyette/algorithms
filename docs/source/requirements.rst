@@ -1,5 +1,0 @@
-************
-Requirements
-************
-
-.. include:: ../../requirements.txt

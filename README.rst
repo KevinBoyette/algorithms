@@ -22,3 +22,5 @@ This repository currently depends on  **pytest** for running tests.
 .. code-block:: sh
    
     ~/projects/Algorithms(master ✗) pytest
+
+A more comprehensive list of dependencies is listed in requirements.txt

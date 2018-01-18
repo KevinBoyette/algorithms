@@ -11,8 +11,8 @@ Welcome to algorithms's documentation!
    :caption: Contents:
 
    readme
-   requirements
-
+   modules
+   
 
 
 Indices and tables

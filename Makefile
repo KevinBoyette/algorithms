@@ -1,3 +1,4 @@
+.PHONY: docs test dev deps lint prospector clean fmt 
 
 test:
 	@pytest
@@ -21,3 +22,7 @@ clean:
 
 fmt:
 	autopep8 -ai **/*.py
+
+docs:
+	@sphinx-apidoc -f -o docs/source .
+	@ cd docs && make html
