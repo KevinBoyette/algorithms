@@ -1,19 +1,22 @@
-#!/usr/bin/env python3
-# Kevin Boyette
+# -*- coding: utf-8 -*-
+"""The SelectionSort Algorithm.
 
-# TODO add cool factor to docstring
+Author: Kevin Boyette
+"""
+from typing import List
 
 
-def selection_sort(array):
-    """
+def selection_sort(array: List[int]) -> List[int]:
+    """Perform selection sort on a list.
 
-    Input: An array to be sorted
-    Output: A sorted array
+    SelectionSort has a runtime of O(n**2).
 
-    Selection sort has a runtime of O(n**2).
+    Args:
+        array (List[int]): An array to be sorted
 
-    :param array:
-    :return:
+    Returns:
+        List[int]: A sorted array
+
     """
     for i in range(len(array) - 1):
         ith_min = i
