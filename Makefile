@@ -1,5 +1,6 @@
+.PHONY: test dev deps clean lint fmt
 
-test:
+test: lint
 	@pytest
 
 dev: deps
