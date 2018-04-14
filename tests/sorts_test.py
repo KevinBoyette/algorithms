@@ -1,7 +1,15 @@
-from .context import sorts
+# -*- coding: utf-8 -*-
+"""Tests For Sorting Functions.
+
+Author: Kevin Boyette
+"""
+from typing import Any, List
+
 import pytest
 
-test_cases = [
+from .context import sorts
+
+TEST_CASES = [
     ("empty list", [], []),
     ("single element", [1], [1]),
     ("two elements", [2, 1], [1, 2]),
@@ -10,30 +18,75 @@ test_cases = [
 ]
 
 
-@pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_bubble_sort(name, inputs, expected):
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
+def test_bubble_sort(
+        name: str, inputs: List[int], expected: List[int]) -> Any:
+    """Test BubbleSort using the test table.
+
+    Args:
+        name (str): name of the test
+        inputs (List[int]): testing a list of ints
+        expected (List[int]): A sorted list of ints
+
+    """
     assert expected == sorts.bubble_sort(inputs), name
 
 
-@pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_insertion_sort(name, inputs, expected):
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
+def test_insertion_sort(
+        name: str, inputs: List[int], expected: List[int]) -> Any:
+    """Test InsertionSort using the test table.
+
+    Args:
+        name (str): name of the test
+        inputs (List[int]): testing a list of ints
+        expected (List[int]): A sorted list of ints
+
+    """
     assert expected == sorts.insertion_sort(inputs), name
 
 
-@pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_heap_sort(name, inputs, expected):
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
+def test_heap_sort(
+        name: str, inputs: List[int], expected: List[int]) -> Any:
+    """Test HeapSort using the test table.
+
+    Args:
+        name (str): name of the test
+        inputs (List[int]): testing a list of ints
+        expected (List[int]): A sorted list of ints
+
+    """
     assert expected == sorts.heap_sort(inputs), name
 
 
-@pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_merge_sort(name, inputs, expected):
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
+def test_merge_sort(
+        name: str, inputs: List[int], expected: List[int]) -> Any:
+    """Test MergeSort using the test table.
+
+    Args:
+        name (str): name of the test
+        inputs (List[int]): testing a list of ints
+        expected (List[int]): A sorted list of ints
+
+    """
     assert expected == sorts.merge_sort(inputs), name
 
 
-@pytest.mark.parametrize("name,inputs,expected", test_cases)
-def test_selection_sort(name, inputs, expected):
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
+def test_selection_sort(
+        name: str, inputs: List[int], expected: List[int]) -> Any:
+    """Test SelectionSort using the test table.
+
+    Args:
+        name (str): name of the test
+        inputs (List[int]): testing a list of ints
+        expected (List[int]): A sorted list of ints
+
+    """
     assert expected == sorts.selection_sort(inputs), name
 
-# @pytest.mark.parametrize("name,inputs,expected", test_cases)
+# @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 # def test_quick_sort(name, inputs, expected):
 #     assert expected == sorts.quick_sort(inputs), name

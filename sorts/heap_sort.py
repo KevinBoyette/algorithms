@@ -1,21 +1,33 @@
-#!/usr/bin/python3
-# Kevin Boyette
-# HeapSort Implementation based off the pseudocode
-# at https://rosettacode.org/wiki/Sorting_algorithms/Heapsort
+# -*- coding: utf-8 -*-
+"""The HeapSort Algorithm.
+
+Author: Kevin Boyette
+
+HeapSort Implementation based off the pseudocode
+at https://rosettacode.org/wiki/Sorting_algorithms/Heapsort
+"""
+from typing import List
 
 
-def heap_sort(array):
-    heapify(array, len(array))
+def heap_sort(array: List[int]) -> List[int]:
+    """Sort a list in O(nlog(n)) time.
+
+    Args:
+        array (List[int]): A list to be sorted
+    Returns:
+        List[int]: A sorted copy of the input list
+    """
+    _heapify(array, len(array))
 
     end = len(array) - 1
     while end > 0:
         array[end], array[0] = array[0], array[end]
         end -= 1
-        sift_down(array, 0, end)
+        _sift_down(array, 0, end)
     return array
 
 
-def sift_down(array, start, end):
+def _sift_down(array: List[int], start: int, end: int) -> None:
     root = start
     while (2 * root + 1) <= end:
         child = 2 * root + 1
@@ -30,8 +42,8 @@ def sift_down(array, start, end):
             break
 
 
-def heapify(array, length):
+def _heapify(array: List[int], length: int) -> None:
     start = (length - 2) // 2
     while start >= 0:
-        sift_down(array, start, length - 1)
+        _sift_down(array, start, length - 1)
         start -= 1

@@ -2,4 +2,6 @@ pytest
 pytest-testmon
 pytest-watch
 mypy
-prospector
+pycodestyle
+pydocstyle
+pylint

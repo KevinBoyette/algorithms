@@ -1,11 +1,16 @@
+# -*- coding: utf-8 -*-
+"""Fun Math Algorithms.
+
+Author: Kevin Boyette
+"""
 from .euler_totient import euler_totient
 from .exponents import (
-    iterative_squaring_exponent_method,
-    recur_exp_by_squaring
+    iterative_fast_exponentiation,
+    recursive_fast_exponentiation
 )
 
 __all__ = [
     'euler_totient',
-    'iterative_squaring_exponent_method',
-    'recur_exp_by_squaring',
+    'iterative_fast_exponentiation',
+    'recursive_fast_exponentiation',
 ]

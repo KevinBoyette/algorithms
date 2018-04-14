@@ -1,5 +1,6 @@
+.PHONY: test dev deps clean lint fmt
 
-test:
+test: lint
 	@pytest
 
 dev: deps
@@ -9,11 +10,10 @@ deps:
 	@pip3 install -r requirements.txt
 
 lint:
-	@mypy --strict **/*.py
-
-prospector:
-	@prospector -s veryhigh
-
+	@mypy --ignore-missing-imports --allow-untyped-decorators --strict **/*.py
+	@pylint **/*.py
+	@pycodestyle **/*.py
+	@pydocstyle
 clean:
 	@rm -r */__pycache__
 	@rm -r .tmontmp

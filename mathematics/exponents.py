@@ -1,56 +1,79 @@
-#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""The Fast Exponentiation Algorithm.
+
+Author: Kevin Boyette
+"""
+from typing import Any
 
 
-def _is_even(n): return True if n % 2 == 0 else False
+def _is_even(questionable_int: Any) -> bool:
+    return True if questionable_int % 2 == 0 else False
 
 
-def _is_odd(n): return True if n % 2 == 1 else False
+def _is_odd(questionable_int: Any) -> bool:
+    return True if questionable_int % 2 == 1 else False
 
 
-def _is_negative(n): return True if n < 0 else False
+def _is_negative(questionable_int: Any) -> bool:
+    return True if questionable_int < 0 else False
 
 
-def _is_zero(n): return True if n == 0 else False
+def _is_zero(questionable_int: Any) -> bool:
+    return True if questionable_int == 0 else False
 
 
-def _is_one(n): return True if n == 1 else False
+def _is_one(questionable_int: Any) -> bool:
+    return True if questionable_int == 1 else False
 
 
-def recur_exp_by_squaring(x, n):
+def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
+    """Recursive method for computing x**n by squaring.
+
+    Args:
+        base (int): An integer base
+        exponent (int): The exponent ontop of the base
+
+    Returns:
+        int: The result of base**exponent
+
     """
-            Recursive method for computing x**n by
-            squaring.
-    """
-    if _is_zero(n):
+    if _is_zero(exponent):
         return 1
-    elif _is_negative(n):
-        return recur_exp_by_squaring(1 / x, -n)
-    elif _is_one(n):
-        return x
-    elif _is_even(n):
-        return recur_exp_by_squaring(x * x, n / 2)
-    elif _is_odd(n):
-        return x * recur_exp_by_squaring(x * x, (n - 1) / 2)
+    elif _is_negative(exponent):
+        return recursive_fast_exponentiation(1 / base, -exponent)
+    elif _is_one(exponent):
+        return base
+    elif _is_even(exponent):
+        return recursive_fast_exponentiation(base * base, exponent / 2)
+    elif _is_odd(exponent):
+        return base * recursive_fast_exponentiation(
+            base * base, (exponent - 1) / 2
+        )
 
 
-def iterative_squaring_exponent_method(x, n):
-    """ 
-        Iterative method for computing x**n by
-        squaring.
+def iterative_fast_exponentiation(base: Any, exponent: Any) -> Any:
+    """Compute x**n by squaring by iterating.
+
+    Args:
+        base (int): An integer base
+        exponent (int): The exponent ontop of the base
+
+    Returns:
+        int: The result of base**exponent
+
     """
-
-    if _is_zero(n):
+    if _is_zero(exponent):
         return 1
-    elif _is_negative(n):
-        x = 1 / x
-        n = -n
-    y = 1
-    while n > 1:
-        if _is_even(n):
-            x *= x
-            n /= 2
+    elif _is_negative(exponent):
+        base = 1 / base
+        exponent = -exponent
+    old_base = 1
+    while exponent > 1:
+        if _is_even(exponent):
+            base *= base
+            exponent /= 2
         else:
-            y = x * 1
-            x *= x
-            n = (n - 1) / 2
-    return x * y
+            old_base = base
+            base *= base
+            exponent = (exponent - 1) / 2
+    return base * old_base
