@@ -11,9 +11,9 @@ deps:
 
 lint:
 	@mypy --ignore-missing-imports --allow-untyped-decorators --strict **/*.py
-	@pylint **/*.py
-	@pycodestyle **/*.py
-	@pydocstyle
+	@python3 -m pylint **/*.py
+	@python3 -m pycodestyle **/*.py
+	@python3 -m pydocstyle **/*.py
 clean:
 	@rm -r */__pycache__
 	@rm -r .tmontmp

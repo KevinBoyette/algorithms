@@ -10,9 +10,9 @@ from .exponents import (
 )
 from .prime_factors import prime_factorization
 
-__all__ = [
+__all__ = (
     'euler_totient',
     'iterative_fast_exponentiation',
     'prime_factorization',
     'recursive_fast_exponentiation',
-]
+)
