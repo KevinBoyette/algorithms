@@ -10,10 +10,10 @@ from .merge_sort import merge_sort
 from .selection_sort import selection_sort
 
 
-__all__ = [
+__all__ = (
     'bubble_sort',
     'heap_sort',
     'insertion_sort',
     'merge_sort',
     'selection_sort'
-]
+)

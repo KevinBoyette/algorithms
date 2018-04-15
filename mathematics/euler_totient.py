@@ -7,7 +7,7 @@ from typing import Any
 
 
 def euler_totient(positive_int: Any) -> Any:
-    """Find the number of integers relatively prime to a given positive integer.
+    """Find the num of integers relatively prime to a given positive integer.
 
     Euler's Totient Function counts the positive integers up to
     a given integer n that are 'relatively' prime to n.
