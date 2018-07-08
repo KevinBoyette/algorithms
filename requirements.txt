@@ -1,4 +1,5 @@
 pytest
+pytest-spec
 pytest-testmon
 pytest-watch
 mypy
