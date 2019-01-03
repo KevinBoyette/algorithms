@@ -6,6 +6,4 @@ Author: Kevin Boyette
 from .fibonacci import fibonacci
 
 
-__all__ = (
-    "fibonacci"
-)
+__all__ = "fibonacci"

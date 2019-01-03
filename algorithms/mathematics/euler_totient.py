@@ -42,9 +42,9 @@ def euler_totient(positive_int: Any) -> Any:
         if positive_int % prime == 0:
             while positive_int % prime == 0:
                 positive_int /= prime
-            result *= (1.0 - (1.0 / float(prime)))
+            result *= 1.0 - (1.0 / float(prime))
         prime += 1
 
     if positive_int > 1:
-        result *= (1.0 - (1.0 / float(positive_int)))
+        result *= 1.0 - (1.0 / float(positive_int))
     return int(result)

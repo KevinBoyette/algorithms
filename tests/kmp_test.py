@@ -7,7 +7,7 @@ from typing import Any, Tuple
 
 import pytest
 
-from .context import strings
+from algorithms import strings
 
 TEST_CASES = [
     (("hello world", "ll"), 2),

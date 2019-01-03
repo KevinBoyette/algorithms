@@ -22,8 +22,10 @@ def reverse(string: str) -> str:
     left_index = 0
     right_index = word_len - 1
     while left_index < word_len / 2:
-        characters[left_index], characters[right_index] = \
-            characters[right_index], characters[left_index]
+        characters[left_index], characters[right_index] = (
+            characters[right_index],
+            characters[left_index],
+        )
         left_index += 1
         right_index -= 1
-    return ''.join(characters)
+    return "".join(characters)

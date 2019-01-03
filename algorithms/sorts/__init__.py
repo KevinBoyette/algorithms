@@ -11,9 +11,9 @@ from .selection_sort import selection_sort
 
 
 __all__ = (
-    'bubble_sort',
-    'heap_sort',
-    'insertion_sort',
-    'merge_sort',
-    'selection_sort'
+    "bubble_sort",
+    "heap_sort",
+    "insertion_sort",
+    "merge_sort",
+    "selection_sort",
 )
