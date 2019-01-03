@@ -23,7 +23,7 @@ def simple_compression(sequence: str) -> str:
     if sequence_length < 1:
         return sequence
     elif sequence_length == 1:
-        return sequence + '1'
+        return sequence + "1"
     current_character = sequence[0]
     count = 1
     compressed_sequence = []
@@ -35,4 +35,4 @@ def simple_compression(sequence: str) -> str:
             current_character = sequence[index]
             count = 1
     compressed_sequence.append(current_character + str(count))
-    return ''.join(compressed_sequence)
+    return "".join(compressed_sequence)

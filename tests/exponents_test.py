@@ -21,7 +21,8 @@ TEST_CASES = [
 
 @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_iter_exponent(
-        name: str, inputs: Tuple[int, int], expected: int) -> Any:
+    name: str, inputs: Tuple[int, int], expected: int
+) -> Any:
     """Test the fast exponentiation algorithm using the test table.
 
     This test uses the iterative method of exponentiation.
@@ -33,14 +34,14 @@ def test_iter_exponent(
 
     """
     assert expected == mathematics.iterative_fast_exponentiation(
-        inputs[0],
-        inputs[1]
+        inputs[0], inputs[1]
     ), name
 
 
 @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_recur_exponent(
-        name: str, inputs: Tuple[int, int], expected: int) -> Any:
+    name: str, inputs: Tuple[int, int], expected: int
+) -> Any:
     """Test the fast exponentiation algorithm using the test table.
 
     This test uses the recursive method of exponentiation.
@@ -52,6 +53,5 @@ def test_recur_exponent(
 
     """
     assert expected == mathematics.recursive_fast_exponentiation(
-        inputs[0],
-        inputs[1]
+        inputs[0], inputs[1]
     ), name

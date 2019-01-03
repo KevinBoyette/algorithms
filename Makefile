@@ -20,4 +20,4 @@ clean:
 	@rm -r .mypy_cache
 
 fmt:
-	autopep8 -ai **/*.py
+	@python3 -m black --line-length 79 **/*.py
