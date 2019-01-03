@@ -7,7 +7,7 @@ from typing import Any
 
 import pytest
 
-from .context import mathematics
+from algorithms import mathematics
 
 
 @pytest.mark.parametrize(

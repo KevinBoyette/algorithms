@@ -7,7 +7,7 @@ from typing import Any, List
 
 import pytest
 
-from .context import sorts
+from algorithms import sorts
 
 TEST_CASES = [
     ("empty list", [], []),

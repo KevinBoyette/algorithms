@@ -8,7 +8,7 @@ from typing import Any
 
 import pytest
 
-from .context import interview
+from algorithms import interview
 
 
 @pytest.mark.parametrize(

@@ -7,7 +7,7 @@ from typing import Any, Tuple
 
 import pytest
 
-from .context import mathematics
+from algorithms import mathematics
 
 TEST_CASES = [
     ("2^3", (2, 3), 8),

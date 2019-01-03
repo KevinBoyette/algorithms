@@ -7,7 +7,7 @@ from typing import Any
 
 import pytest
 
-from .context import dynamic
+from algorithms import dynamic
 
 
 @pytest.mark.parametrize(
