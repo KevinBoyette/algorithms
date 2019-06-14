@@ -23,7 +23,7 @@ def test_bubble_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     """Test BubbleSort using the test table.
 
     Args:
-        name (str): name of the test
+        name (str):  name of the test
         inputs (List[int]): testing a list of ints
         expected (List[int]): A sorted list of ints
 

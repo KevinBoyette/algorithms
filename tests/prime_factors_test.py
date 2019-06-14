@@ -11,7 +11,7 @@ from algorithms import mathematics
 
 
 @pytest.mark.parametrize(
-    "name,inputs,expected",
+    "name,input_parameter,expected_value",
     [
         ("positive value", 10, [2, 5]),
         ("testing 0", 0, []),
@@ -24,13 +24,17 @@ from algorithms import mathematics
         ("testing -1", -1, []),
     ],
 )
-def test_prime_factors(name: str, inputs: int, expected: int) -> Any:
+def test_prime_factors(
+    name: str, input_parameter: int, expected_value: int
+) -> Any:
     """Test prime factorization using the test table.
 
     Args:
         name (str): name of the test
-        inputs (int): testing an integer input
-        expected (int): value that is expected
+        input_parameter (int): testing an integer input
+        expected_value (int): value that is expected
 
     """
-    assert expected == mathematics.prime_factorization(inputs), name
+    assert expected_value == mathematics.prime_factorization(
+        input_parameter
+    ), name
