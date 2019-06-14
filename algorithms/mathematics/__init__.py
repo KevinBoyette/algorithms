@@ -4,7 +4,10 @@
 Author: Kevin Boyette
 """
 from .euler_totient import euler_totient
-from .exponents import iterative_fast_exponentiation, recursive_fast_exponentiation
+from .exponents import (
+    iterative_fast_exponentiation,
+    recursive_fast_exponentiation,
+)
 from .prime_factors import prime_factorization
 
 __all__ = (

@@ -20,4 +20,5 @@ clean:
 	@rm -r .mypy_cache
 
 fmt:
-	@python3 -m black --line-length 79 **/*.py
+#	@python3 -m black --line-length 79 **/*.py
+	@find . -name *.py | xargs python3 -m black --line-length 79

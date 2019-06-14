@@ -12,7 +12,7 @@ from algorithms import interview
 
 
 @pytest.mark.parametrize(
-    "name,inputs,expected",
+    "test_name,inputs,expected",
     [
         ("simple", "simple", "elpmis"),
         ("racecar", "racecar", "racecar"),
@@ -23,13 +23,13 @@ from algorithms import interview
         ("None", "None", "enoN"),
     ],
 )
-def test_reverse_function(name: str, inputs: str, expected: str) -> Any:
+def test_reverse_function(test_name: str, inputs: str, expected: str) -> Any:
     """Test reverse using the test table.
 
     Args:
-        name (str): The name of the test case
+        test_name (str): The name of the test case
         inputs (str): A word/string
         expected (str): reversed word
 
     """
-    assert expected == interview.reverse(inputs), name
+    assert expected == interview.reverse(inputs), test_name
