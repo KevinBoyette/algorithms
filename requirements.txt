@@ -7,3 +7,4 @@ pycodestyle
 pydocstyle
 pylint
 black
+tox

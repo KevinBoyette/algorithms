@@ -13,10 +13,7 @@ pycodestyle = "*"
 pydocstyle = "*"
 pylint = "*"
 black = "*"
-
-
-[packages]
-
+tox = "*"
 
 [requires]
 python_version = "3.7"
