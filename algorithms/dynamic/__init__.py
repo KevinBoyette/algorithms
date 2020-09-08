@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Dynamic Programming Algorithms.
 
 Author: Kevin Boyette
@@ -6,4 +5,4 @@ Author: Kevin Boyette
 from .fibonacci import fibonacci
 
 
-__all__ = "fibonacci"
+__all__ = ['fibonacci']

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Tests For The Fibonacci Function.
 
 Author: Kevin Boyette
@@ -11,16 +10,16 @@ from algorithms import dynamic
 
 
 @pytest.mark.parametrize(
-    "name,inputs,expected",
+    'name,inputs,expected',
     [
-        ("fibonacci number: 0", 0, 0),
-        ("fibonacci number: 1", 1, 1),
-        ("fibonacci number: 2", 2, 1),
-        ("fibonacci number: 3", 3, 2),
-        ("fibonacci number: 5", 5, 5),
-        ("fibonacci number: 6", 6, 8),
-        ("fibonacci number: 7", 7, 13),
-        ("fibonacci number: 47", 47, 2971215073),
+        ('fibonacci number: 0', 0, 0),
+        ('fibonacci number: 1', 1, 1),
+        ('fibonacci number: 2', 2, 1),
+        ('fibonacci number: 3', 3, 2),
+        ('fibonacci number: 5', 5, 5),
+        ('fibonacci number: 6', 6, 8),
+        ('fibonacci number: 7', 7, 13),
+        ('fibonacci number: 47', 47, 2971215073),
     ],
 )
 def test_fibonacci(name: str, inputs: int, expected: int) -> Any:

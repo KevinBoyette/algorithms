@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The BubbleSort Algorithm.
 
 Author: Kevin Boyette

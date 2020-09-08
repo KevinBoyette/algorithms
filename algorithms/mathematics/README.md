@@ -1,3 +1,1 @@
 # Math Algorithms
-
-

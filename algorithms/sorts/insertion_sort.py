@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The InsertionSort Algorithm.
 
 Author: Kevin Boyette

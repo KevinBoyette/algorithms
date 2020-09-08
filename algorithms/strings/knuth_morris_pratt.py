@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The Knuth Morris Pratt Algorithm.
 
 Author: Kevin Boyette

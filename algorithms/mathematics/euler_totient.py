@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Euler's Totient/Phi Function.
 
 Author: Kevin Boyette

@@ -1,6 +1,5 @@
-from typing import List
-
 import heapq
+from typing import List
 
 
 def nth_smallest(unsorted_array: List[int], n: int) -> int:

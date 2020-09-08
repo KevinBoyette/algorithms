@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The HeapSort Algorithm.
 
 Author: Kevin Boyette

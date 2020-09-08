@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The SelectionSort Algorithm.
 
 Author: Kevin Boyette

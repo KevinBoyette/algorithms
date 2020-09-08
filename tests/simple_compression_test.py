@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """simple_compression_test.py.
 
 Author: Kevin Boyette
 """
-
 from typing import Any
 
 import pytest
@@ -12,15 +10,15 @@ from algorithms import interview
 
 
 @pytest.mark.parametrize(
-    "name,inputs,expected",
+    'name,inputs,expected',
     [
-        ("aaaabbbccdaa", "aaaabbbccdaa", "a4b3c2d1a2"),
-        ("multiple occurences with capitals", "AAAABBBCCDAA", "a4b3c2d1a2"),
-        ("aaabbc", "aaabbc", "a3b2c1"),
-        ("abbbccbbaaa", "abbbccbbaaa", "a1b3c2b2a3"),
-        ("empty string", "", ""),
-        ("single letter", "a", "a1"),
-        ("single letter", "a", "a1"),
+        ('aaaabbbccdaa', 'aaaabbbccdaa', 'a4b3c2d1a2'),
+        ('multiple occurences with capitals', 'AAAABBBCCDAA', 'a4b3c2d1a2'),
+        ('aaabbc', 'aaabbc', 'a3b2c1'),
+        ('abbbccbbaaa', 'abbbccbbaaa', 'a1b3c2b2a3'),
+        ('empty string', '', ''),
+        ('single letter', 'a', 'a1'),
+        ('single letter', 'a', 'a1'),
     ],
 )
 def test_simple_compression(name: str, inputs: str, expected: str) -> Any:

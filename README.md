@@ -1,10 +1,10 @@
 # Algorithms
 
-An assortment of algorithms written for fun. 
+An assortment of algorithms written for fun.
 
 ## Developing
 
-Use `pipenv` while developing.  This will ensure a pleasant workflow. 
+Use `pipenv` while developing.  This will ensure a pleasant workflow.
 
 ### Git Hooks
 

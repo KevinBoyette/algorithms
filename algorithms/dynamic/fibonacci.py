@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """The Fibonacci Number Generating Algorithm.
 
 Author: Kevin Boyette
 """
-
 from functools import lru_cache
 
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """The MergeSort Algorithm.
 
 Author: Kevin Boyette

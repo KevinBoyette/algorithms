@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
 """Prime Factorization.
 
 Author: Kevin Boyette
 """
-from typing import Any, List
 from math import sqrt
+from typing import Any
+from typing import List
 
 
 def prime_factorization(natural_number: Any) -> List[int]:

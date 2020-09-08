@@ -1,10 +1,10 @@
-pytest
-pytest-spec
-pytest-testmon
-pytest-watch
+black
 mypy
 pycodestyle
 pydocstyle
 pylint
-black
+pytest
+pytest-spec
+pytest-testmon
+pytest-watch
 tox
