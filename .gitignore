@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL filesa
 .mypy_cache
 .tmontmp
 .testmondata
@@ -94,3 +94,4 @@ ENV/
 .ropeproject
 
 .pytest_cache
+*.#*
