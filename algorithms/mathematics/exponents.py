@@ -46,7 +46,8 @@ def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
         return recursive_fast_exponentiation(base * base, exponent / 2)
     elif _is_odd(exponent):
         return base * recursive_fast_exponentiation(
-            base * base, (exponent - 1) / 2,
+            base * base,
+            (exponent - 1) / 2,
         )
 
 

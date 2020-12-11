@@ -10,15 +10,15 @@ from algorithms import interview
 
 
 @pytest.mark.parametrize(
-    'test_name,inputs,expected',
+    "test_name,inputs,expected",
     [
-        ('simple', 'simple', 'elpmis'),
-        ('racecar', 'racecar', 'racecar'),
-        ('dingo', 'dingo', 'ognid'),
-        ('tuna', 'tuna', 'anut'),
-        ('5', '5', '5'),
-        ('', '', ''),
-        ('None', 'None', 'enoN'),
+        ("simple", "simple", "elpmis"),
+        ("racecar", "racecar", "racecar"),
+        ("dingo", "dingo", "ognid"),
+        ("tuna", "tuna", "anut"),
+        ("5", "5", "5"),
+        ("", "", ""),
+        ("None", "None", "enoN"),
     ],
 )
 def test_reverse_function(test_name: str, inputs: str, expected: str) -> Any:
