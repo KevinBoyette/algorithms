@@ -6,23 +6,23 @@ from typing import Any
 
 
 def _is_even(questionable_int: Any) -> bool:
-    return True if questionable_int % 2 == 0 else False
+    return bool(questionable_int % 2 == 0)
 
 
 def _is_odd(questionable_int: Any) -> bool:
-    return True if questionable_int % 2 == 1 else False
+    return bool(questionable_int % 2 == 1)
 
 
 def _is_negative(questionable_int: Any) -> bool:
-    return True if questionable_int < 0 else False
+    return bool(questionable_int < 0)
 
 
 def _is_zero(questionable_int: Any) -> bool:
-    return True if questionable_int == 0 else False
+    return bool(questionable_int == 0)
 
 
 def _is_one(questionable_int: Any) -> bool:
-    return True if questionable_int == 1 else False
+    return bool(questionable_int == 1)
 
 
 def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:

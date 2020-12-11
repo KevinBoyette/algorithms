@@ -6,7 +6,6 @@ from typing import Any
 from typing import Tuple
 
 import pytest
-
 from algorithms import strings
 
 TEST_CASES = [

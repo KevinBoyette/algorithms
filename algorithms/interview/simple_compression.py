@@ -21,7 +21,7 @@ def simple_compression(sequence: str) -> str:
     sequence = sequence.lower()
     if sequence_length < 1:
         return sequence
-    elif sequence_length == 1:
+    if sequence_length == 1:
         return sequence + "1"
     current_character = sequence[0]
     count = 1
