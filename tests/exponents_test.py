@@ -10,18 +10,20 @@ import pytest
 from algorithms import mathematics
 
 TEST_CASES = [
-    ('2^3', (2, 3), 8),
-    ('1^1', (1, 1), 1),
-    ('2^1', (2, 1), 2),
-    ('0^2', (0, 2), 0),
-    ('2^0', (2, 0), 1),
-    ('5^4', (5, 4), 625),
+    ("2^3", (2, 3), 8),
+    ("1^1", (1, 1), 1),
+    ("2^1", (2, 1), 2),
+    ("0^2", (0, 2), 0),
+    ("2^0", (2, 0), 1),
+    ("5^4", (5, 4), 625),
 ]
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_iter_exponent(
-    name: str, inputs: Tuple[int, int], expected: int,
+    name: str,
+    inputs: Tuple[int, int],
+    expected: int,
 ) -> Any:
     """Test the fast exponentiation algorithm using the test table.
 
@@ -34,13 +36,16 @@ def test_iter_exponent(
 
     """
     assert expected == mathematics.iterative_fast_exponentiation(
-        inputs[0], inputs[1],
+        inputs[0],
+        inputs[1],
     ), name
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_recur_exponent(
-    name: str, inputs: Tuple[int, int], expected: int,
+    name: str,
+    inputs: Tuple[int, int],
+    expected: int,
 ) -> Any:
     """Test the fast exponentiation algorithm using the test table.
 
@@ -53,5 +58,6 @@ def test_recur_exponent(
 
     """
     assert expected == mathematics.recursive_fast_exponentiation(
-        inputs[0], inputs[1],
+        inputs[0],
+        inputs[1],
     ), name

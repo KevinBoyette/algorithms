@@ -6,23 +6,19 @@ from typing import Any
 
 
 def _is_even(questionable_int: Any) -> bool:
-    return True if questionable_int % 2 == 0 else False
-
-
-def _is_odd(questionable_int: Any) -> bool:
-    return True if questionable_int % 2 == 1 else False
+    return bool(questionable_int % 2 == 0)
 
 
 def _is_negative(questionable_int: Any) -> bool:
-    return True if questionable_int < 0 else False
+    return bool(questionable_int < 0)
 
 
 def _is_zero(questionable_int: Any) -> bool:
-    return True if questionable_int == 0 else False
+    return bool(questionable_int == 0)
 
 
 def _is_one(questionable_int: Any) -> bool:
-    return True if questionable_int == 1 else False
+    return bool(questionable_int == 1)
 
 
 def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
@@ -38,16 +34,16 @@ def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
     """
     if _is_zero(exponent):
         return 1
-    elif _is_negative(exponent):
+    if _is_negative(exponent):
         return recursive_fast_exponentiation(1 / base, -exponent)
-    elif _is_one(exponent):
+    if _is_one(exponent):
         return base
-    elif _is_even(exponent):
+    if _is_even(exponent):
         return recursive_fast_exponentiation(base * base, exponent / 2)
-    elif _is_odd(exponent):
-        return base * recursive_fast_exponentiation(
-            base * base, (exponent - 1) / 2,
-        )
+    return base * recursive_fast_exponentiation(
+        base * base,
+        (exponent - 1) / 2,
+    )
 
 
 def iterative_fast_exponentiation(base: Any, exponent: Any) -> Any:
@@ -63,7 +59,7 @@ def iterative_fast_exponentiation(base: Any, exponent: Any) -> Any:
     """
     if _is_zero(exponent):
         return 1
-    elif _is_negative(exponent):
+    if _is_negative(exponent):
         base = 1 / base
         exponent = -exponent
     old_base = 1

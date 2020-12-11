@@ -27,4 +27,4 @@ def reverse(string: str) -> str:
         )
         left_index += 1
         right_index -= 1
-    return ''.join(characters)
+    return "".join(characters)

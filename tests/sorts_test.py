@@ -10,15 +10,15 @@ import pytest
 from algorithms import sorts
 
 TEST_CASES = [
-    ('empty list', [], []),
-    ('single element', [1], [1]),
-    ('two elements', [2, 1], [1, 2]),
-    ('reversed list', [5, 4, 3, 2, 1], [1, 2, 3, 4, 5]),
-    ('alternating values', [5, 3, 4, 1, 2], [1, 2, 3, 4, 5]),
+    ("empty list", [], []),
+    ("single element", [1], [1]),
+    ("two elements", [2, 1], [1, 2]),
+    ("reversed list", [5, 4, 3, 2, 1], [1, 2, 3, 4, 5]),
+    ("alternating values", [5, 3, 4, 1, 2], [1, 2, 3, 4, 5]),
 ]
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_bubble_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     """Test BubbleSort using the test table.
 
@@ -31,9 +31,11 @@ def test_bubble_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     assert expected == sorts.bubble_sort(inputs), name
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_insertion_sort(
-    name: str, inputs: List[int], expected: List[int],
+    name: str,
+    inputs: List[int],
+    expected: List[int],
 ) -> Any:
     """Test InsertionSort using the test table.
 
@@ -46,7 +48,7 @@ def test_insertion_sort(
     assert expected == sorts.insertion_sort(inputs), name
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_heap_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     """Test HeapSort using the test table.
 
@@ -59,7 +61,7 @@ def test_heap_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     assert expected == sorts.heap_sort(inputs), name
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_merge_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     """Test MergeSort using the test table.
 
@@ -72,9 +74,11 @@ def test_merge_sort(name: str, inputs: List[int], expected: List[int]) -> Any:
     assert expected == sorts.merge_sort(inputs), name
 
 
-@pytest.mark.parametrize('name,inputs,expected', TEST_CASES)
+@pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_selection_sort(
-    name: str, inputs: List[int], expected: List[int],
+    name: str,
+    inputs: List[int],
+    expected: List[int],
 ) -> Any:
     """Test SelectionSort using the test table.
 
