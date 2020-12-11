@@ -64,7 +64,7 @@ def iterative_fast_exponentiation(base: Any, exponent: Any) -> Any:
     """
     if _is_zero(exponent):
         return 1
-    elif _is_negative(exponent):
+    if _is_negative(exponent):
         base = 1 / base
         exponent = -exponent
     old_base = 1
