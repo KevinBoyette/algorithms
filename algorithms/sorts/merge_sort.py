@@ -24,13 +24,13 @@ def merge_sort(arr: List[int]) -> List[int]:
     temp_len = len(temp)
     if temp_len > 1:
         middle = temp_len // 2
-        left = merge_sort(temp[:middle])
-        right = merge_sort(temp[middle:])
-        return _merge(left, right)
+        left = merge_sort(list(temp[:middle]))
+        right = merge_sort(list(temp[middle:]))
+        return _merge(array("l", left), array("l", right))
     return list(temp)
 
 
-def _merge(left: List[int], right: List[int]) -> List[int]:
+def _merge(left: array[int], right: array[int]) -> List[int]:
     result = array("l", [])
     left_length = len(left)
     right_length = len(right)
