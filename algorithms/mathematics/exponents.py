@@ -9,10 +9,6 @@ def _is_even(questionable_int: Any) -> bool:
     return bool(questionable_int % 2 == 0)
 
 
-def _is_odd(questionable_int: Any) -> bool:
-    return bool(questionable_int % 2 == 1)
-
-
 def _is_negative(questionable_int: Any) -> bool:
     return bool(questionable_int < 0)
 
@@ -44,7 +40,6 @@ def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
         return base
     if _is_even(exponent):
         return recursive_fast_exponentiation(base * base, exponent / 2)
-    # if _is_odd(exponent):
     return base * recursive_fast_exponentiation(
         base * base,
         (exponent - 1) / 2,

@@ -37,6 +37,9 @@ jobs:
       - name: Lint with mypy
         run: |
           mypy --strict algorithms/
+      - name: Lint with pylint
+        run: |
+          pylint algorithms/
       - name: Test with Tox
         run: |
           tox -s -p
