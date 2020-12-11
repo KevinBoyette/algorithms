@@ -44,11 +44,11 @@ def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
         return base
     if _is_even(exponent):
         return recursive_fast_exponentiation(base * base, exponent / 2)
-    #if _is_odd(exponent):
+    # if _is_odd(exponent):
     return base * recursive_fast_exponentiation(
-            base * base,
-            (exponent - 1) / 2,
-        )
+        base * base,
+        (exponent - 1) / 2,
+    )
 
 
 def iterative_fast_exponentiation(base: Any, exponent: Any) -> Any:
