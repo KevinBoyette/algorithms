@@ -1,26 +1,34 @@
+""" Finding the nth smallest element in the array
+
+Author: Kevin Boyette
+"""
+
 import heapq
-from typing import List
+from typing import List, Optional
 
 
-def nth_smallest(unsorted_array: List[int], n: int) -> int:
+def nth_smallest(unsorted_array: List[int], nth_to_find: int) -> Optional[int]:
+
     """Return the nth smallest integer from an array of unsorted ints
 
     Args:
-        unsorted_array:    An unsorted array
-        n:                 The nth smallest to find
+        unsorted_array:              An unsorted array
+        nth_to_find:                 The nth smallest to find
 
     Returns:
-        int:               The integer that is the nth smallest
+        int:                         The integer that is the nth smallest
 
     Example:
         nth_smallest([1,2,3,4], 2) -> 2
 
     """
+    final = None
     heap: List[int] = []
     for each_item in unsorted_array:
         heapq.heappush(heap, each_item)
-    for index in range(n):
+    for index in range(nth_to_find):
         smallest = heapq.heappop(heap)
-        if index == (n - 1):
-            return smallest
-    return 0  # TODO: Fix the 0 return later
+        if index == (nth_to_find - 1):
+            final = smallest
+
+    return final

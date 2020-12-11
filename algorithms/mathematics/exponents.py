@@ -38,14 +38,14 @@ def recursive_fast_exponentiation(base: Any, exponent: Any) -> Any:
     """
     if _is_zero(exponent):
         return 1
-    elif _is_negative(exponent):
+    if _is_negative(exponent):
         return recursive_fast_exponentiation(1 / base, -exponent)
-    elif _is_one(exponent):
+    if _is_one(exponent):
         return base
-    elif _is_even(exponent):
+    if _is_even(exponent):
         return recursive_fast_exponentiation(base * base, exponent / 2)
-    elif _is_odd(exponent):
-        return base * recursive_fast_exponentiation(
+    #if _is_odd(exponent):
+    return base * recursive_fast_exponentiation(
             base * base,
             (exponent - 1) / 2,
         )
