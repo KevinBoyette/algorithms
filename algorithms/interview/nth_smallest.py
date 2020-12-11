@@ -1,6 +1,6 @@
 import heapq
 from typing import List
-
+from array import array
 
 def nth_smallest(unsorted_array: List[int], n: int) -> int:
     """Return the nth smallest integer from an array of unsorted ints

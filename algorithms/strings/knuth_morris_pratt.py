@@ -7,7 +7,7 @@ Heavily based on (practically line for line)
 https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm
 """
 from typing import List
-
+from array import array
 
 def _prefix_kmp(pattern: str) -> List[int]:
     """Create a prefix table for the Knuth-Morris-Pratt algorithm.
@@ -24,7 +24,7 @@ def _prefix_kmp(pattern: str) -> List[int]:
 
     """
     pattern_length = len(pattern)
-    prefix_table = [-1] * pattern_length
+    prefix_table = array('l', [-1] * pattern_length)
     j = -1
     for i in range(1, pattern_length):
         while j > -1 and pattern[i - 1] != pattern[j]:
