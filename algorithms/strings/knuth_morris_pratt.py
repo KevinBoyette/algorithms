@@ -7,7 +7,6 @@ Heavily based on (practically line for line)
 https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm
 """
 from typing import List
-from array import array
 
 
 def _prefix_kmp(pattern: str) -> List[int]:
