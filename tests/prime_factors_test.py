@@ -2,7 +2,7 @@
 
 Author: Kevin Boyette
 """
-from typing import Any
+from typing import Any, List
 
 import pytest
 
@@ -26,7 +26,7 @@ from algorithms import mathematics
 def test_prime_factors(
     name: str,
     input_parameter: int,
-    expected_value: int,
+    expected_value: List[int],
 ) -> Any:
     """Test prime factorization using the test table.
 

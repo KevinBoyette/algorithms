@@ -14,6 +14,8 @@ lint:
 	@python3 -m pylint **/*.py
 	@python3 -m pycodestyle **/*.py
 	@python3 -m pydocstyle **/*.py
+	@python3 -m flake8 algorithms/
+	@python3 -m vulture .
 clean:
 	@rm -r */__pycache__
 	@rm -r .tmontmp
