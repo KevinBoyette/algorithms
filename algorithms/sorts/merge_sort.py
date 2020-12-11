@@ -3,7 +3,6 @@
 Author: Kevin Boyette
 """
 from typing import List
-from array import array
 
 
 def merge_sort(arr: List[int]) -> List[int]:
@@ -20,18 +19,17 @@ def merge_sort(arr: List[int]) -> List[int]:
         List[int]: A sorted array
 
     """
-    temp = array("l", arr)
-    temp_len = len(temp)
-    if temp_len > 1:
-        middle = temp_len // 2
-        left = merge_sort(list(temp[:middle]))
-        right = merge_sort(list(temp[middle:]))
-        return _merge(array("l", left), array("l", right))
-    return list(temp)
+    arr_len = len(arr)
+    if arr_len > 1:
+        middle = arr_len // 2
+        left = merge_sort(arr[:middle])
+        right = merge_sort(arr[middle:])
+        return _merge(left, right)
+    return list(arr)
 
 
-def _merge(left: array[int], right: array[int]) -> List[int]:
-    result = array("l", [])
+def _merge(left: List[int], right: List[int]) -> List[int]:
+    result = []
     left_length = len(left)
     right_length = len(right)
     while left_length > 0 and right_length > 0:
@@ -48,4 +46,4 @@ def _merge(left: array[int], right: array[int]) -> List[int]:
     if new_left_length != 0:
         result.extend(left)
     result.extend(right)
-    return list(result)
+    return result
