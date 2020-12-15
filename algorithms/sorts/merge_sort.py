@@ -2,7 +2,7 @@
 
 Author: Kevin Boyette
 """
-from typing import List, Union, TypeVar
+from typing import List, TypeVar
 from array import array
 
 IntSequence = TypeVar("IntSequence", List[int], array[int])
