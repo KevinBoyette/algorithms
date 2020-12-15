@@ -2,10 +2,13 @@
 
 Author: Kevin Boyette
 """
-from typing import List
+from typing import List, Union, TypeVar
+from array import array
+
+IntSequence = TypeVar("IntSequence", List[int], array[int])
 
 
-def merge_sort(arr: List[int]) -> List[int]:
+def merge_sort(arr: IntSequence) -> List[int]:
     """Sort an array using MergeSort.
 
         MergeSort has a worst case runtime of O(nlog(n)).
@@ -19,17 +22,18 @@ def merge_sort(arr: List[int]) -> List[int]:
         List[int]: A sorted array
 
     """
-    arr_len = len(arr)
+    temp = array("l", arr)
+    arr_len = len(temp)
     if arr_len > 1:
         middle = arr_len // 2
-        left = merge_sort(arr[:middle])
-        right = merge_sort(arr[middle:])
+        left = merge_sort(temp[:middle])
+        right = merge_sort(temp[middle:])
         return _merge(left, right)
     return list(arr)
 
 
-def _merge(left: List[int], right: List[int]) -> List[int]:
-    result = []
+def _merge(left: IntSequence, right: IntSequence) -> List[int]:
+    result = array("l", [])
     left_length = len(left)
     right_length = len(right)
     while left_length > 0 and right_length > 0:
@@ -46,4 +50,4 @@ def _merge(left: List[int], right: List[int]) -> List[int]:
     if new_left_length != 0:
         result.extend(left)
     result.extend(right)
-    return result
+    return list(result)
