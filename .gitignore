@@ -95,3 +95,4 @@ ENV/
 
 .pytest_cache
 *.#*
+.pyre*
