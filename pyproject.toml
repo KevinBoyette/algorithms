@@ -17,7 +17,6 @@ pytest-spec = "^3.1.0"
 pytest = "^6.2.2"
 pytest-testmon = "^1.1.0"
 pytest-watch = "^4.2.0"
-tox = "^3.23.0"
 pycodestyle = "^2.7.0"
 pydocstyle = "^6.0.0"
 
@@ -28,15 +27,3 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 line-length = 79
 
-[tool.tox]
-legacy_tox_ini = """
-[tox]
-envlist = py36,py37,py 38
-skipdist = True
-isolated_build = True
-
-[testenv]
-deps = -r requirements.txt
-       pytest
-commands = pytest
-"""

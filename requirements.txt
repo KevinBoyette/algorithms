@@ -8,5 +8,4 @@ pytest
 pytest-spec
 pytest-testmon
 pytest-watch
-tox
 vulture
