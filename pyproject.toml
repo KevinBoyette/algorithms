@@ -1,6 +1,29 @@
+[tool.poetry]
+name = "algorithms"
+version = "0.1.0"
+description = "A long running toy project"
+authors = ["Kevin Boyette <kevinxboyette@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+mypy = "^0.812"
+pylint = "^2.7.2"
+vulture = "^2.3"
+pytest-spec = "^3.1.0"
+pytest = "^6.2.2"
+pytest-testmon = "^1.1.0"
+pytest-watch = "^4.2.0"
+tox = "^3.23.0"
+pycodestyle = "^2.7.0"
+pydocstyle = "^6.0.0"
+
 [build-system]
-requires = [ "setuptools >= 35.0.2", "wheel >= 0.29.0"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 79
