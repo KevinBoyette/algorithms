@@ -9,6 +9,9 @@ dev: deps
 deps:
 	@poetry install
 
+fmt:
+	@poetry run python3 -m black .
+
 lint:
 	@poetry run python3 -m mypy --ignore-missing-imports --allow-untyped-decorators --strict **/*.py
 	@poetry run python3 -m pylint **/*.py
@@ -21,6 +24,3 @@ clean:
 	@rm -r .tmontmp
 	@rm -r .mypy_cache
 
-fmt:
-#	@python3 -m black --line-length 79 **/*.py
-	@find . -name *.py | xargs python3 -m black --line-length 79
