@@ -9,3 +9,6 @@ An assortment of algorithms written for fun.
 
 Use `poetry` while developing.  This will ensure a pleasant workflow.
 
+## Documentation
+
+To view documentation, run `make html` from the `./docs` directory.
