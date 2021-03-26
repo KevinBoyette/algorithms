@@ -1,9 +1,8 @@
 """The InsertionSort Algorithm.
 
 Author: Kevin Boyette
-
-Insertion sort, nothing fancy and pretty standard
 """
+
 from typing import List
 from array import array
 
@@ -11,7 +10,7 @@ from array import array
 def insertion_sort(arr: List[int]) -> List[int]:
     """Sort an arr using InsertionSort.
 
-        Insertion sort has a runtime of O(n**2).
+    Insertion sort has a runtime of O(n**2).
     A runtime of O(n) is achievable if the arr is
     almost sorted.
 
@@ -20,7 +19,6 @@ def insertion_sort(arr: List[int]) -> List[int]:
 
     Returns:
         List[int]: A sorted array
-
     """
     temp = array("l", arr)
     temp_len = len(temp)

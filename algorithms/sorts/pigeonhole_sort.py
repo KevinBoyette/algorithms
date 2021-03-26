@@ -6,7 +6,9 @@ from typing import List, Tuple
 
 
 def pigeonhole_sort(arr: List[Tuple[int, str]]) -> List[Tuple[int, str]]:
-    """Sort a list in O(n + N) time where N is the range of key values
+    """Sort a list.
+
+    Sorts a list in O(n + N) time where N is the range of key values
     and n is the input size.
 
     Args:

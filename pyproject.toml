@@ -20,6 +20,13 @@ pytest-watch = "^4.2.0"
 pycodestyle = "^2.7.0"
 pydocstyle = "^6.0.0"
 pytype = "^2021.3.22"
+Sphinx = "^3.5.3"
+
+[tool.pylint."MASTER"]
+ignore-patterns = "docs/conf.py"
+
+[tool.pylint."MESSAGE CONTROL"]
+disable = ["C0330"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

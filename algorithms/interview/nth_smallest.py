@@ -1,4 +1,4 @@
-""" Finding the nth smallest element in the array
+"""Finding the nth smallest element in the array.
 
 Author: Kevin Boyette
 """
@@ -8,8 +8,7 @@ from typing import List, Optional
 
 
 def nth_smallest(unsorted_array: List[int], nth_to_find: int) -> Optional[int]:
-
-    """Return the nth smallest integer from an array of unsorted ints
+    """Return the nth smallest integer from an array of unsorted ints.
 
     Args:
         unsorted_array:              An unsorted array

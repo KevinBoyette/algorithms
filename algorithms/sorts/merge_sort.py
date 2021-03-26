@@ -1,6 +1,7 @@
 """The MergeSort Algorithm.
 
 Author: Kevin Boyette
+
 """
 from typing import List
 
@@ -8,7 +9,7 @@ from typing import List
 def merge_sort(arr: List[int]) -> List[int]:
     """Sort an array using MergeSort.
 
-        MergeSort has a worst case runtime of O(nlog(n)).
+    MergeSort has a worst case runtime of O(nlog(n)).
     MergeSort's best case uses roughly half as many iterations and
     is a stable sort.
 
@@ -17,7 +18,6 @@ def merge_sort(arr: List[int]) -> List[int]:
 
     Returns:
         List[int]: A sorted array
-
     """
     arr_len = len(arr)
     if arr_len > 1:
