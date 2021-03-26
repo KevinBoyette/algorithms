@@ -14,7 +14,7 @@ fmt:
 
 lint:
 	@poetry run python3 -m mypy --ignore-missing-imports --allow-untyped-decorators --strict **/*.py
-	@poetry run python3 -m pytype algorithms/
+	@poetry run python3 -m pytype -j auto algorithms/
 	@poetry run python3 -m pylint **/*.py
 	@poetry run python3 -m pycodestyle **/*.py
 	@poetry run python3 -m pydocstyle **/*.py
