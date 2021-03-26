@@ -42,4 +42,4 @@ jobs:
           pytype -j auto algorithms/
       - name: Lint with pylint
         run: |
-          pylint algorithms/
+          pylint -j 0 algorithms/
