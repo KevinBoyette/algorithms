@@ -4,22 +4,54 @@ Author: Kevin Boyette
 """
 
 from typing import Any, List, Tuple
+from copy import deepcopy
 import pytest
 from algorithms import sorts
 
 TEST_CASES = [
     ("empty list", [], []),
     ("single element", [(1, "test")], [(1, "test")]),
-    ("two elements", [(2, "test"), (1, "item")], [(1, "item"), (2, "test")]),
+    (
+        "two elements",
+        [(2, "test"), (1, "item")],
+        [
+            (1, "item"),
+            (2, "test"),
+        ],
+    ),
     (
         "reversed list",
-        [(5, "test"), (4, "test"), (3, "test"), (2, "test"), (1, "test")],
-        [(1, "test"), (2, "test"), (3, "test"), (4, "test"), (5, "test")],
+        [
+            (5, "test"),
+            (4, "test"),
+            (3, "test"),
+            (2, "test"),
+            (1, "test"),
+        ],
+        [
+            (1, "test"),
+            (2, "test"),
+            (3, "test"),
+            (4, "test"),
+            (5, "test"),
+        ],
     ),
     (
         "alternating values",
-        [(5, "test"), (3, "test"), (4, "test"), (1, "test"), (2, "test")],
-        [(1, "test"), (2, "test"), (3, "test"), (4, "test"), (5, "test")],
+        [
+            (5, "test"),
+            (3, "test"),
+            (4, "test"),
+            (1, "test"),
+            (2, "test"),
+        ],
+        [
+            (1, "test"),
+            (2, "test"),
+            (3, "test"),
+            (4, "test"),
+            (5, "test"),
+        ],
     ),
 ]
 
@@ -37,3 +69,17 @@ def test_pigeonhole_sort(
 
     """
     assert expected == sorts.pigeonhole_sort(inputs), name
+
+
+def test_original_array_is_not_mutated() -> None:
+    """Test that the original array is not mutated by our sort."""
+    initial = [
+        (5, "test"),
+        (4, "test"),
+        (3, "test"),
+        (2, "test"),
+        (1, "test"),
+    ]
+    expected = deepcopy(initial)
+    sorts.pigeonhole_sort(initial)
+    assert initial == expected

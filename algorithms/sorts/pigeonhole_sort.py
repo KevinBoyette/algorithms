@@ -2,12 +2,16 @@
 
 Author: Kevin Boyette
 """
+from functools import reduce
+from operator import iconcat
 from typing import List, Tuple
 
 
 def pigeonhole_sort(arr: List[Tuple[int, str]]) -> List[Tuple[int, str]]:
     """Sort a list in O(n + N) time where N is the range of key values
     and n is the input size.
+
+    This function does not mutate the original array.
 
     Args:
         arr (List[Tuple[int, str]): A list of tuples to be sorted
@@ -16,15 +20,10 @@ def pigeonhole_sort(arr: List[Tuple[int, str]]) -> List[Tuple[int, str]]:
     """
     if len(arr) <= 1:
         return arr
-    smallest = min(key for key, value in arr)
-    spread = max(key for key, value in arr) - smallest + 1
+    smallest = min(key for key, _ in arr)
+    spread = max(key for key, _ in arr) - smallest + 1
     pigeonholes: List[List[Tuple[int, str]]] = [[] for _ in range(spread)]
     for key, value in arr:
         pigeonhole = pigeonholes[key - smallest]
         pigeonhole.append((key, value))
-    i = 0
-    for pigeonhole in pigeonholes:
-        for elem in pigeonhole:
-            arr[i] = elem
-            i += 1
-    return arr
+    return reduce(iconcat, pigeonholes, [])
