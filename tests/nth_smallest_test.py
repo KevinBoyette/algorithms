@@ -7,7 +7,7 @@ from typing import List
 
 import pytest
 
-from algorithms.interview import nth_smallest
+from algorithms.misc import nth_smallest
 
 
 TEST_CASES = [

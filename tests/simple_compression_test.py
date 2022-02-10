@@ -6,7 +6,7 @@ from typing import Any
 
 import pytest
 
-from algorithms import interview
+from algorithms import misc
 
 
 @pytest.mark.parametrize(
@@ -30,4 +30,4 @@ def test_simple_compression(name: str, inputs: str, expected: str) -> Any:
         expected (str): A compressed word
 
     """
-    assert expected == interview.simple_compression(inputs), name
+    assert expected == misc.simple_compression(inputs), name

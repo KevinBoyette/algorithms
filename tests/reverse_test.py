@@ -6,7 +6,7 @@ from typing import Any
 
 import pytest
 
-from algorithms import interview
+from algorithms import misc
 
 
 @pytest.mark.parametrize(
@@ -30,4 +30,4 @@ def test_reverse_function(test_name: str, inputs: str, expected: str) -> Any:
         expected (str): reversed word
 
     """
-    assert expected == interview.reverse(inputs), test_name
+    assert expected == misc.reverse(inputs), test_name

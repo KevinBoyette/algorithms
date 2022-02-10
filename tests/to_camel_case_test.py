@@ -4,7 +4,7 @@ Author: Kevin Boyette
 """
 from typing import Any
 import pytest
-from algorithms.interview import to_camel_case
+from algorithms.misc import to_camel_case
 
 
 @pytest.mark.parametrize(
