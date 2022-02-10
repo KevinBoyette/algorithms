@@ -14,11 +14,9 @@ def _position(word: str) -> int:
         int: the position in which the number occurs
 
     """
-    pos = -100
-    for letter in word:
-        if letter.isdigit():
-            pos = int(letter)
-    return pos
+
+    pos = (int(number) for number in word if number.isdigit())
+    return next(pos)
 
 
 def order(sentence: str) -> str:
