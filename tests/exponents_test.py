@@ -3,7 +3,6 @@
 Author: Kevin Boyette
 """
 from typing import Any
-from typing import Tuple
 
 import pytest
 
@@ -22,7 +21,7 @@ TEST_CASES = [
 @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_iter_exponent(
     name: str,
-    inputs: Tuple[int, int],
+    inputs: tuple[int, int],
     expected: int,
 ) -> Any:
     """Test the fast exponentiation algorithm using the test table.
@@ -44,7 +43,7 @@ def test_iter_exponent(
 @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_recur_exponent(
     name: str,
-    inputs: Tuple[int, int],
+    inputs: tuple[int, int],
     expected: int,
 ) -> Any:
     """Test the fast exponentiation algorithm using the test table.

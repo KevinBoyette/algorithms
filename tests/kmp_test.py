@@ -3,7 +3,6 @@
 Author: Kevin Boyette
 """
 from typing import Any
-from typing import Tuple
 
 import pytest
 from algorithms import strings
@@ -19,11 +18,11 @@ TEST_CASES = [
 
 
 @pytest.mark.parametrize("inputs,expected", TEST_CASES)
-def test_kmp(inputs: Tuple[str, str], expected: int) -> Any:
+def test_kmp(inputs: tuple[str, str], expected: int) -> Any:
     """Test KMP using the test table.
 
     Args:
-        inputs (Tuple[str, str]): Tuple(word, pattern)
+        inputs (tuple[str, str]): tuple(word, pattern)
         expected (int): expected index
 
     """

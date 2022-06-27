@@ -5,10 +5,9 @@ Author: Kevin Boyette
 HeapSort Implementation based off the pseudocode
 at https://rosettacode.org/wiki/Sorting_algorithms/Heapsort
 """
-from typing import List
 
 
-def heap_sort(array: List[int]) -> List[int]:
+def heap_sort(array: list[int]) -> list[int]:
     """Sort a list in O(nlog(n)) time.
 
     Args:
@@ -26,7 +25,7 @@ def heap_sort(array: List[int]) -> List[int]:
     return array
 
 
-def _sift_down(array: List[int], start: int, end: int) -> None:
+def _sift_down(array: list[int], start: int, end: int) -> None:
     root = start
     while (2 * root + 1) <= end:
         child = 2 * root + 1
@@ -41,7 +40,7 @@ def _sift_down(array: List[int], start: int, end: int) -> None:
             break
 
 
-def _heapify(array: List[int], length: int) -> None:
+def _heapify(array: list[int], length: int) -> None:
     start = (length - 2) // 2
     while start >= 0:
         _sift_down(array, start, length - 1)

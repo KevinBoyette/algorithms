@@ -3,7 +3,6 @@
 Author: Kevin Boyette
 """
 from typing import Any
-from typing import List
 
 import pytest
 
@@ -25,7 +24,7 @@ TEST_CASES = [
 )
 def test_nth_smallest(
     test_name: str,
-    input_array: List[int],
+    input_array: list[int],
     test_parameter: int,
     expected_value: int,
 ) -> Any:
@@ -33,9 +32,9 @@ def test_nth_smallest(
 
     Args:
         test_name (str):            The name of the test
-        input_array (List[int]):    Testing an array of ints
+        input_array (list[int]):    Testing an array of ints
         test_parameter (int):       The nth smallest integer to find
-        expected_value (List[int]): The nth smallest integer from the array
+        expected_value (list[int]): The nth smallest integer from the array
 
     """
     assert expected_value == nth_smallest(

@@ -2,7 +2,7 @@
 
 Author: Kevin Boyette
 """
-from typing import Any, Tuple
+from typing import Any
 import itertools
 import pytest
 from algorithms import mathematics
@@ -42,7 +42,7 @@ small_binomial_coeffs = [
 
 
 @pytest.mark.parametrize("name,inputs,expected", small_binomial_coeffs)
-def test_n_choose_r(name: str, inputs: Tuple[int, int], expected: int) -> Any:
+def test_n_choose_r(name: str, inputs: tuple[int, int], expected: int) -> Any:
     """Test factorial function using the test table.
 
     Args:
@@ -70,7 +70,7 @@ def test_n_choose_r(name: str, inputs: Tuple[int, int], expected: int) -> Any:
     ),
 )
 def test_fast_binomial(
-    name: str, inputs: Tuple[int, int], expected: int
+    name: str, inputs: tuple[int, int], expected: int
 ) -> Any:
     """Test factorial function using the test table.
 

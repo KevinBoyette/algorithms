@@ -4,10 +4,9 @@ Author: Kevin Boyette
 """
 from math import sqrt
 from typing import Any
-from typing import List
 
 
-def prime_factorization(natural_number: Any) -> List[int]:
+def prime_factorization(natural_number: Any) -> list[int]:
     """Find all prime factors of a given natural number.
 
     Args:

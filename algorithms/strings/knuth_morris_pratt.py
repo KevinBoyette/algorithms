@@ -6,10 +6,9 @@ Date: 8/24/2016
 Heavily based on (practically line for line)
 https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm
 """
-from typing import List
 
 
-def _prefix_kmp(pattern: str) -> List[int]:
+def _prefix_kmp(pattern: str) -> list[int]:
     """Create a prefix table for the Knuth-Morris-Pratt algorithm.
 
     This table is used to prevent the index from backtracking during the

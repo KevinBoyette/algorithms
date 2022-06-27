@@ -2,11 +2,10 @@
 
 Author: Kevin Boyette
 """
-from typing import List
 from array import array
 
 
-def bubble_sort(arr: List[int]) -> List[int]:
+def bubble_sort(arr: list[int]) -> list[int]:
     """Sort a list in O(n**2) time.
 
     Why would you ever need this sort?

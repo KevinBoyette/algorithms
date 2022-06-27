@@ -2,10 +2,9 @@
 
 Author: Kevin Boyette
 """
-from typing import List
 
 
-def merge_sort(arr: List[int]) -> List[int]:
+def merge_sort(arr: list[int]) -> list[int]:
     """Sort an array using MergeSort.
 
         MergeSort has a worst case runtime of O(nlog(n)).
@@ -28,7 +27,7 @@ def merge_sort(arr: List[int]) -> List[int]:
     return list(arr)
 
 
-def _merge(left: List[int], right: List[int]) -> List[int]:
+def _merge(left: list[int], right: list[int]) -> list[int]:
     result = []
     left_length = len(left)
     right_length = len(right)

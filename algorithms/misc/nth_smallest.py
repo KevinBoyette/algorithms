@@ -4,10 +4,10 @@ Author: Kevin Boyette
 """
 
 import heapq
-from typing import List, Optional
+from typing import Optional
 
 
-def nth_smallest(unsorted_array: List[int], nth_to_find: int) -> Optional[int]:
+def nth_smallest(unsorted_array: list[int], nth_to_find: int) -> Optional[int]:
 
     """Return the nth smallest integer from an array of unsorted ints
 
@@ -23,7 +23,7 @@ def nth_smallest(unsorted_array: List[int], nth_to_find: int) -> Optional[int]:
 
     """
     final = None
-    heap: List[int] = []
+    heap: list[int] = []
     for each_item in unsorted_array:
         heapq.heappush(heap, each_item)
     for index in range(nth_to_find):

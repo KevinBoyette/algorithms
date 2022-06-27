@@ -4,11 +4,10 @@ Author: Kevin Boyette
 
 Insertion sort, nothing fancy and pretty standard
 """
-from typing import List
 from array import array
 
 
-def insertion_sort(arr: List[int]) -> List[int]:
+def insertion_sort(arr: list[int]) -> list[int]:
     """Sort an arr using InsertionSort.
 
         Insertion sort has a runtime of O(n**2).

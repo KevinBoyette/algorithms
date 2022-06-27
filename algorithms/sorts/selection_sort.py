@@ -2,11 +2,10 @@
 
 Author: Kevin Boyette
 """
-from typing import List
 from array import array
 
 
-def selection_sort(arr: List[int]) -> List[int]:
+def selection_sort(arr: list[int]) -> list[int]:
     """Perform selection sort on a list.
 
     SelectionSort has a runtime of O(n**2).

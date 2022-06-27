@@ -4,10 +4,9 @@ Author: Kevin Boyette
 """
 
 from io import StringIO
-from typing import Tuple
 
 
-def to_camel_case(string: str, predicate: Tuple[str, str] = ("_", "-")) -> str:
+def to_camel_case(string: str, predicate: tuple[str, str] = ("_", "-")) -> str:
     """Convert string from snake_case or kebob-case to camelCase
 
     Args:

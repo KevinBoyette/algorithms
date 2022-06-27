@@ -3,7 +3,7 @@
 Author: Kevin Boyette
 """
 
-from typing import Any, List, Tuple
+from typing import Any
 from copy import deepcopy
 import pytest
 from algorithms import sorts
@@ -58,7 +58,7 @@ TEST_CASES = [
 
 @pytest.mark.parametrize("name,inputs,expected", TEST_CASES)
 def test_pigeonhole_sort(
-    name: str, inputs: List[Tuple[int, str]], expected: List[Tuple[int, str]]
+    name: str, inputs: list[tuple[int, str]], expected: list[tuple[int, str]]
 ) -> Any:
     """Test pigeonhole_sort using the test table.
 
