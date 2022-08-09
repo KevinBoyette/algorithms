@@ -3,8 +3,8 @@
 Author: Kevin Boyette
 """
 
-import heapq
 from typing import Optional
+from heapq import heappush, heappop
 
 
 def nth_smallest(unsorted_array: list[int], nth_to_find: int) -> Optional[int]:
@@ -25,9 +25,9 @@ def nth_smallest(unsorted_array: list[int], nth_to_find: int) -> Optional[int]:
     final = None
     heap: list[int] = []
     for each_item in unsorted_array:
-        heapq.heappush(heap, each_item)
+        heappush(heap, each_item)
     for index in range(nth_to_find):
-        smallest = heapq.heappop(heap)
+        smallest = heappop(heap)
         if index == (nth_to_find - 1):
             final = smallest
 
