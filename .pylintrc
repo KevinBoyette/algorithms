@@ -1,5 +1,3 @@
 [MASTER]
 
 [MESSAGES CONTROL]
-# C0330: Wrong hanging indentation.
-disable=C0330
