@@ -10,15 +10,15 @@ python = ">=3.9,<3.11"
 [tool.poetry.dev-dependencies]
 black = "^22.10.0"
 flake8 = "^5.0.4"
-mypy = "^0.982"
+mypy = "^0.990"
 pycodestyle = "^2.9.1"
 pydocstyle = "^6.1.1"
 pylint = "^2.15.4"
 pytest = "^7.2.0"
-pytype = "^2022.10.13"
+pytype = "^2022.11.10"
 vulture = "^2.6"
 perflint = "^0.7.3"
-pyupgrade = "^3.0.0"
+pyupgrade = "^3.2.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
